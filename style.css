@@ -1,0 +1,27 @@
+.scroll-container {
+  width: 200px;            /* container width */
+  height: 300px;           /* container height */
+  overflow: hidden;        /* bahar ka content chhupana */
+  border: 2px solid black;
+  position: relative;
+}
+
+.scroll-content {
+  display: flex;
+  flex-direction: column;   /* images ko column me rakhna */
+  animation: scrollUp 10s linear infinite; /* animation */
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(100%); /* neeche se start */
+  }
+  100% {
+    transform: translateY(-100%); /* upar tak chala jaaye */
+  }
+}
+
+.scroll-content img {
+  margin: 10px 0;
+  border-radius: 10px;
+}
